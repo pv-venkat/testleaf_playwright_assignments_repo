@@ -1,5 +1,5 @@
 let grade = 'B';
-function indiaelection()
+function student()
 {
     switch (grade) {
         case 'A':
@@ -20,4 +20,5 @@ function indiaelection()
             break;
     }
 }
-    indiaelection();
+
+    student();
