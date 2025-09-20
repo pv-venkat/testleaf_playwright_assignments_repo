@@ -17,9 +17,10 @@ let score = ">60";
             console.log("Student has failed with E grade");
             break;
         default:
-             return "Invalid marks."
+              console.log( "Invalid marks.");
             break;
     }
 }
 student();
+
 
