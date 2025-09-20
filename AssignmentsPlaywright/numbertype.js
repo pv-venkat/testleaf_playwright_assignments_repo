@@ -9,10 +9,10 @@ function numbertype(num)
         }
         else 
         {
-        console.log("The number is Zero");         
+        console.log("The number is Netural");         
 
         }
 }
-let num = '-24';
+let num = '0';
 numbertype(num);
 
