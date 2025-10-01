@@ -11,11 +11,13 @@ test("Launching the browser demo", async() => {
       const browser2 = await webkit.launch({headless: false});
       const context2 = await browser2.newContext();
       const page2 = await context2.newPage();     
-      await page2.goto("https://www.flipkart.com/",{waitUntil: 'load'});        
+      await page2.goto("https://www.flipkart.com/",{waitUntil: 'load'});    
+      await page2.waitForTimeout(2000);   
       console.log(await page2.title());
       console.log(await page2.url());    
       
       await page1.close();  
       await page2.close();  
 });
+
 
