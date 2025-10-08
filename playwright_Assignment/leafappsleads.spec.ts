@@ -24,6 +24,8 @@ test("Salesforce application Demo", async({page}) => {
    await page.locator(`#createLeadForm_primaryPhoneNumber`).fill("9789837492");
    await page.locator(`.smallSubmit`).click();
    console.log(await page.title());
+   await page.waitForTimeout(3000); 
+
    
    //Find Lead
    await page.waitForLoadState("domcontentloaded");
@@ -43,4 +45,5 @@ test("Salesforce application Demo", async({page}) => {
    await page.locator(`#updateLeadForm_description`).fill("Tamil Movie Actor");
    await page.locator("//input[@class='smallSubmit']").nth(0).click();
    await page.waitForTimeout(5000); 
+
    })
