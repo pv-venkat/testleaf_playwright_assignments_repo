@@ -23,6 +23,7 @@ test("Salesforce application Demo", async({page}) => {
    await page.locator(`#createLeadForm_departmentName`).fill("Accounts");
    await page.locator(`#createLeadForm_primaryPhoneNumber`).fill("9789837492");
    await page.locator(`.smallSubmit`).click();
+   await page.waitForTimeout(3000); 
    console.log(await page.title());
    await page.waitForTimeout(3000); 
 
@@ -39,11 +40,10 @@ test("Salesforce application Demo", async({page}) => {
    await page.waitForLoadState("domcontentloaded");
    await page.locator(`(//a[@class="linktext"])[4]`).click();
    await page.locator(`//a[text()="Edit"]`).click();
-   await page.locator(`//input[@id='updateLeadForm_firstName']`).fill("SivaKarthikeyan");
+   await page.locator(`//input[@id='updateLeadForm_firstName']`).fill("SivaKarthi");
    await page.locator(`//input[@id='updateLeadForm_annualRevenue']`).fill("250000");
    await page.locator(`//input[@id='updateLeadForm_departmentName']`).fill("Admin");
    await page.locator(`#updateLeadForm_description`).fill("Tamil Movie Actor");
    await page.locator("//input[@class='smallSubmit']").nth(0).click();
    await page.waitForTimeout(5000); 
-
    })
