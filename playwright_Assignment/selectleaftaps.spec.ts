@@ -1,6 +1,6 @@
 import { test } from "@playwright/test";
 
-test("Salesforce application Demo", async({page}) => { 
+test("Verifying dropdown elements using Select locator", async({page}) => { 
 
    await page.goto(`http://leaftaps.com/opentaps/control/main`);
    await page.locator(`#username`).fill(`Demosalesmanager`);
@@ -33,5 +33,6 @@ test("Salesforce application Demo", async({page}) => {
    await page.waitForTimeout(3000); 
    console.log(await page.title());
    await page.waitForTimeout(3000); 
+
 
 })
